@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <include name="imx-5.10.35-2.0.0.xml"/>
+  
+  <remote name="egf-meta" fetch="https://bitbucket.org/egf-common/metaegf-c0533-s0670-egf-imx8-hardknott.git"/>
+  <remote name="egf-docker" fetch="https://bitbucket.org/egf-common/docker-builder-u18.04.git"/>
+
+  <default sync-j="2"/>
+  
+  <project name="meta-egf" path="sources/meta-egf" remote="egf-meta" revision="767099e4ce752419e7d2b345a6b0bba719cca2d6"/>
+  <project name="docker-builder" path="docker-builder" remote="egf-docker" revision="729a41df4faa66ea9801f70320c15756d55a1561"/>
+</manifest>
