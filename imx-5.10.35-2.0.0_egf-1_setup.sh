@@ -20,7 +20,7 @@ BRANCH_NXP_VERSIONE="imx-linux-hardknott"
 NXP_MANIFEST_REPO="https://github.com/nxp-imx/imx-manifest"
 MANIFEST_EGF="imx-5.10.35-2.0.0_egf-1.xml"
 EGF_MANIFEST_REPO="manifests"
-EGF_MANIFEST_REV="2dd30f0f0ab0998a7c76087ec3c325391398b431"
+EGF_MANIFEST_REV="1533fd4790d8c987733b29329723ea434e11f8e2"
 
 
 # === Prerequisites =============================================================================================================
