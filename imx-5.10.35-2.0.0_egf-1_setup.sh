@@ -20,7 +20,7 @@ BRANCH_NXP_VERSIONE="imx-linux-hardknott"
 NXP_MANIFEST_REPO="https://github.com/nxp-imx/imx-manifest"
 MANIFEST_EGF="imx-5.10.35-2.0.0_egf-1.xml"
 EGF_MANIFEST_REPO="manifests"
-EGF_MANIFEST_REV="248c7655b2111d1ee214d77983f41ff1f86096a2"
+EGF_MANIFEST_REV="2dd30f0f0ab0998a7c76087ec3c325391398b431"
 
 
 # === Prerequisites =============================================================================================================
@@ -50,14 +50,14 @@ if [ ! -f ~/bin/repo ]; then
    export PATH=$PATH:~/bin
 fi
 
-/bin/python3 ~/bin/repo init -u $NXP_MANIFEST_REPO -b $BRANCH_NXP_VERSIONE -m $MANIFEST_NXP
+python3 ~/bin/repo init -u $NXP_MANIFEST_REPO -b $BRANCH_NXP_VERSIONE -m $MANIFEST_NXP
 
 cd .repo/manifests
 wget https://bitbucket.org/egf-common/$EGF_MANIFEST_REPO/raw/$EGF_MANIFEST_REV/$MANIFEST_EGF
 cd ../..
-/bin/python3 ~/bin/repo init -m $MANIFEST_EGF
+python3 ~/bin/repo init -m $MANIFEST_EGF
 
-/bin/python3 ~/bin/repo sync
+python3 ~/bin/repo sync
 
 
 # === Docker ====================================================================================================================
@@ -80,18 +80,4 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 sudo usermod -a -G docker $UBUNTU_USER
 
-
-# === Commands to be run manually after installation ============================================================================
-
-# export PROG_DIR="/home/user/project"
-# cd $PROG_DIR/docker-builder
-# newgrp docker
-# ./docker_image_build.sh
-# ./docker_run.sh
-
-# cd yocto-input/sources/meta-egf
-# ./scripts/egf-setup.sh
-# cd ../../
-# source setup_build.sh
-# bitbake egf-image-qt5-0533
-# bitbake egf-image-qt5-0533 -c populate_sdk
+sg docker -c "cd $PROG_DIR/docker-builder && ./docker_image_build.sh && export PROG_DIR=$PROG_DIR && ./docker_run.sh"
