@@ -20,7 +20,7 @@ BRANCH_NXP_VERSIONE="imx-linux-hardknott"
 NXP_MANIFEST_REPO="https://github.com/nxp-imx/imx-manifest"
 MANIFEST_EGF="imx-5.10.35-2.0.0_egf-1.xml"
 EGF_MANIFEST_REPO="manifests"
-EGF_MANIFEST_REV="..."
+EGF_MANIFEST_REV="6befffc6bdca7edfda9573286f2f9f28c3b759ba"
 YOCTO_DISTRO_IMAGE_NAME="egf-image-qt5-0533"
 
 # === Prerequisites =============================================================================================================
