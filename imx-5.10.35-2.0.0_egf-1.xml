@@ -8,5 +8,5 @@
   <default sync-j="2"/>
   
   <project name="meta-egf" path="sources/meta-egf" remote="egf-meta" revision="767099e4ce752419e7d2b345a6b0bba719cca2d6"/>
-  <project name="docker-builder" path="docker-builder" remote="egf-docker" revision="0376ce67dd60ed5d744932956518ccd4d32517c2"/>
+  <project name="docker-builder" path="docker-builder" remote="egf-docker" revision="f8bc99f264fe1f0ca64bedfbde4ed4fd1f0b183f"/>
 </manifest>

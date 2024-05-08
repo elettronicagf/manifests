@@ -8,10 +8,10 @@
 # === Environment variables =====================================================================================================
 
 # === Variables to be modified by the user ===
-UBUNTU_USER="user"
-GIT_USERNAME="user"
+UBUNTU_USER="${USER}"
+GIT_USERNAME="username"
 GIT_USER_EMAIL="user@email"
-PROG_DIR="/home/user/project"
+PROG_DIR="${HOME}/project"
 
 # === Variables related to manifests ===
 GIT_REPO_DOWNLOADS_URL="http://commondatastorage.googleapis.com/git-repo-downloads/repo"
@@ -20,8 +20,8 @@ BRANCH_NXP_VERSIONE="imx-linux-hardknott"
 NXP_MANIFEST_REPO="https://github.com/nxp-imx/imx-manifest"
 MANIFEST_EGF="imx-5.10.35-2.0.0_egf-1.xml"
 EGF_MANIFEST_REPO="manifests"
-EGF_MANIFEST_REV="1533fd4790d8c987733b29329723ea434e11f8e2"
-
+EGF_MANIFEST_REV="..."
+YOCTO_DISTRO_IMAGE_NAME="egf-image-qt5-0533"
 
 # === Prerequisites =============================================================================================================
 
@@ -80,4 +80,6 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 sudo usermod -a -G docker $UBUNTU_USER
 
-sg docker -c "cd $PROG_DIR/docker-builder && ./docker_image_build.sh && export PROG_DIR=$PROG_DIR && ./docker_run.sh"
+sg docker -c "cd $PROG_DIR/docker-builder \
+&& export YOCTO_DISTRO_IMAGE_NAME=$YOCTO_DISTRO_IMAGE_NAME && ./docker_image_build.sh \
+&& export PROG_DIR=$PROG_DIR && ./docker_run.sh"
