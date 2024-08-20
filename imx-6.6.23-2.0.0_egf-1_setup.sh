@@ -20,7 +20,7 @@ BRANCH_NXP_VERSIONE="imx-linux-scarthgap"
 NXP_MANIFEST_REPO="https://github.com/nxp-imx/imx-manifest"
 MANIFEST_EGF="imx-6.6.23-2.0.0_egf-1.xml"
 EGF_MANIFEST_REPO="manifests"
-EGF_MANIFEST_REV="4ef15877682f0ff519277b8e3ed5ff40886cb761"
+EGF_MANIFEST_REV="4f9f5820a52b10ac167039b516001da0fe53e6d9"
 YOCTO_DISTRO_IMAGE_NAME="egf-image"
 
 # === Prerequisites =============================================================================================================
