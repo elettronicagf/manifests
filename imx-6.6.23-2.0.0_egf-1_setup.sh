@@ -20,7 +20,7 @@ BRANCH_NXP_VERSIONE="imx-linux-scarthgap"
 NXP_MANIFEST_REPO="https://github.com/nxp-imx/imx-manifest"
 MANIFEST_EGF="imx-6.6.23-2.0.0_egf-1.xml"
 EGF_MANIFEST_REPO="manifests"
-EGF_MANIFEST_REV="a4eb2e8f87b6362e4125b541da2960e0e6e515a7"
+EGF_MANIFEST_BRANCH="main"
 YOCTO_DISTRO_IMAGE_NAME="egf-image"
 
 # === Prerequisites =============================================================================================================
@@ -42,18 +42,23 @@ cd $PROG_DIR/yocto-input
 git config --global color.ui true
 git config --global user.name $GIT_USERNAME
 git config --global user.email $GIT_USER_EMAIL
+
 if [ ! -f ~/bin/repo ]; then
-   echo "Installing repo..."
-   mkdir ~/bin
-   curl $GIT_REPO_DOWNLOADS_URL > ~/bin/repo
-   chmod a+x ~/bin/repo
-   export PATH=$PATH:~/bin
+rm -f ~/bin/repo
 fi
+
+echo "Installing repo..."
+mkdir ~/bin
+curl $GIT_REPO_DOWNLOADS_URL > ~/bin/repo
+chmod a+x ~/bin/repo
+export PATH=$PATH:~/bin
+
 
 python3 ~/bin/repo init -u $NXP_MANIFEST_REPO -b $BRANCH_NXP_VERSIONE -m $MANIFEST_NXP
 
 cd .repo/manifests
-wget https://bitbucket.org/egf-common/$EGF_MANIFEST_REPO/raw/$EGF_MANIFEST_REV/$MANIFEST_EGF
+rm -rf $MANIFEST_EGF*
+wget https://bitbucket.org/egf-common/$EGF_MANIFEST_REPO/raw/$EGF_MANIFEST_BRANCH/$MANIFEST_EGF
 cd ../..
 python3 ~/bin/repo init -m $MANIFEST_EGF
 
@@ -64,6 +69,9 @@ python3 ~/bin/repo sync
 
 mv docker-builder ..
 cd ../docker-builder/
+
+PROG_DIR_SED=$(echo $PROG_DIR | sed 's_/_\\/_g')
+sed -i "s/\${PROG_DIR}/${PROG_DIR_SED}/g" docker_run.sh
 
 sudo apt-get -y install ca-certificates gnupg
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -79,4 +87,8 @@ sudo apt-get -y update
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 sudo usermod -a -G docker $UBUNTU_USER
+
+
+
+echo "Reboot machine to apply changes..."
 

@@ -7,7 +7,7 @@
   <remote name="egf-meta" fetch="https://bitbucket.org/egf-common/meta-egf-bsp-imx.git"/>
   <remote name="egf-docker" fetch="https://bitbucket.org/egf-common/docker-builder-u22.04.git"/>
 
-  <project name="meta-egf" path="sources/meta-egf-bsp-imx" remote="egf-meta" revision="01b5f3d3029971d040a7744387483587f89e46d2">
+  <project name="meta-egf" path="sources/meta-egf-bsp-imx" remote="egf-meta" revision="d69fb19ed7ed7ea5024a54fa24f81a67866114e4">
      <linkfile src="scripts/setup-egf-imx8mm-3sm1008m" dest="setup-egf-imx8mm-3sm1008m"/>
      <linkfile src="scripts/setup-egf-imx8mp-3sm1009" dest="setup-egf-imx8mp-3sm1009"/>
      <linkfile src="scripts/setup-environment-egf" dest="setup-environment-egf"/>
