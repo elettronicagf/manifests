@@ -46,7 +46,7 @@
 
 	<project name="meta-maselettronica" 		remote="mas-elettronica" 	path="sources/meta-maselettronica" 		revision=""				upstream="iMX93-NEI000X0-dev-ds">
 		<linkfile dest="tools/mas-imx-setup-release.sh" src="mas-setup-release.sh"/>
-		<linkfile dest="README" src="README"/>-->	
+		<linkfile dest="README" src="README"/>
 	</project>
 
 </manifest>
