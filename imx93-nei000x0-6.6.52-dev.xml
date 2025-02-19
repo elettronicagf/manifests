@@ -44,7 +44,7 @@
 	<project name="meta-nxp-connectivity" 		remote="imx" 				path="sources/meta-nxp-connectivity" 	revision="refs/tags/rel_imx_6.6.52_2.2.0"				upstream="imx_matter_2024_q3-post"/>
 	<project name="meta-nxp-demo-experience" 	remote="imx-support"		path="sources/meta-nxp-demo-experience" revision="refs/tags/rel_imx_6.6.52_2.2.0"				upstream="scarthgap-6.6.52-2.2.0"/>
 
-	<project name="meta-maselettronica" 		remote="mas-elettronica" 	path="sources/meta-maselettronica" 		revision="d2a6f4ab7259749761d31846002293dd9ee4abae"		upstream="iMX93-NEI000X0-dev-ds">
+	<project name="meta-maselettronica" 		remote="mas-elettronica" 	path="sources/meta-maselettronica" 		revision="6fed9d9fcc511c21ef827543be0dd22626bf81b9"		upstream="iMX93-NEI000X0-dev-ds">
 		<linkfile src="tools/mas-imx-setup-release.sh" dest="mas-setup-release.sh"/>
 		<linkfile src="README" dest="README"/>
 	</project>
