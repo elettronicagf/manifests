@@ -53,7 +53,8 @@ fi
 python3 ~/bin/repo init -u $NXP_MANIFEST_REPO -b $BRANCH_NXP_VERSIONE -m $MANIFEST_NXP
 
 cd .repo/manifests
-wget https://bitbucket.org/egf-common/$EGF_MANIFEST_REPO/raw/$EGF_MANIFEST_REV/$MANIFEST_EGF
+
+wget https://raw.githubusercontent.com/elettronicagf/$EGF_MANIFEST_REPO/$EGF_MANIFEST_REV/$MANIFEST_EGF
 cd ../..
 python3 ~/bin/repo init -m $MANIFEST_EGF
 
