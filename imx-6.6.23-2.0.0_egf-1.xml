@@ -4,15 +4,14 @@
 
   <include name="imx-6.6.23-2.0.0.xml"/>
   
-  <remote name="egf-meta" fetch="https://github.com/elettronicagf"/>
-  <remote name="egf-docker" fetch="https://github.com/elettronicagf"/>
+  <remote name="egf" fetch="https://github.com/elettronicagf"/>
 
-  <project name="meta-egf-bsp-imx" path="sources/meta-egf-bsp-imx" remote="egf-meta" revision="d69fb19ed7ed7ea5024a54fa24f81a67866114e4">
+  <project name="meta-egf-bsp-imx" path="sources/meta-egf-bsp-imx" remote="egf" revision="d69fb19ed7ed7ea5024a54fa24f81a67866114e4">
      <linkfile src="scripts/setup-egf-imx8mm-3sm1008m" dest="setup-egf-imx8mm-3sm1008m"/>
      <linkfile src="scripts/setup-egf-imx8mp-3sm1009" dest="setup-egf-imx8mp-3sm1009"/>
      <linkfile src="scripts/setup-environment-egf" dest="setup-environment-egf"/>
   </project>
 
-  <project name="docker-builder-u22.04" path="docker-builder" remote="egf-docker" revision="c0f503920c2bfb96b0891fee544604f8d8742f98"/>
+  <project name="docker-builder-u22.04" path="docker-builder" remote="egf" revision="c0f503920c2bfb96b0891fee544604f8d8742f98"/>
 
 </manifest>
