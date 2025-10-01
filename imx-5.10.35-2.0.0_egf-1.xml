@@ -2,11 +2,10 @@
 <manifest>
   <include name="imx-5.10.35-2.0.0.xml"/>
   
-  <remote name="egf-meta" fetch="https://github.com/elettronicagf"/>
-  <remote name="egf-docker" fetch="https://github.com/elettronicagf"/>
+  <remote name="egf" fetch="https://github.com/elettronicagf"/>
 
   <default sync-j="2"/>
   
-  <project name="metaegf-c0533-s0670-egf-imx8-hardknott" path="sources/meta-egf" remote="egf-meta" revision="767099e4ce752419e7d2b345a6b0bba719cca2d6"/>
-  <project name="docker-builder-u18.04" path="docker-builder" remote="egf-docker" revision="f8bc99f264fe1f0ca64bedfbde4ed4fd1f0b183f"/>
+  <project name="metaegf-c0533-s0670-egf-imx8-hardknott" path="sources/meta-egf" remote="egf" revision="767099e4ce752419e7d2b345a6b0bba719cca2d6"/>
+  <project name="docker-builder-u18.04" path="docker-builder" remote="egf" revision="f8bc99f264fe1f0ca64bedfbde4ed4fd1f0b183f"/>
 </manifest>
