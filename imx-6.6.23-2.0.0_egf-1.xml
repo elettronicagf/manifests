@@ -6,9 +6,10 @@
   
   <remote name="egf" fetch="https://github.com/elettronicagf"/>
 
-  <project name="meta-egf-bsp-imx" path="sources/meta-egf-bsp-imx" remote="egf" revision="d69fb19ed7ed7ea5024a54fa24f81a67866114e4">
+  <project name="meta-egf-bsp-imx" path="sources/meta-egf-bsp-imx" remote="egf" revision="527b3bb4379677136bad022e8e66c15b1f6c546f">
      <linkfile src="scripts/setup-egf-imx8mm-3sm1008m" dest="setup-egf-imx8mm-3sm1008m"/>
      <linkfile src="scripts/setup-egf-imx8mp-3sm1009" dest="setup-egf-imx8mp-3sm1009"/>
+     <linkfile src="scripts/setup-egf-imx93-3sm1010" dest="setup-egf-imx93-3sm1010"/>
      <linkfile src="scripts/setup-environment-egf" dest="setup-environment-egf"/>
   </project>
 
