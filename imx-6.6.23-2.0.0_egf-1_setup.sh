@@ -28,7 +28,9 @@ YOCTO_DISTRO_IMAGE_NAME="egf-image"
 # === Update and utilities ===
 sudo apt-get -y update
 sudo apt-get -y install git
-sudo snap install curl
+# in some version snap version of curl show a banner
+sudo snap remove curl
+sudo apt-get -y install curl
 
 # === Folders ===
 mkdir -p $PROG_DIR
@@ -49,7 +51,7 @@ fi
 
 echo "Installing repo..."
 mkdir ~/bin
-curl $GIT_REPO_DOWNLOADS_URL > ~/bin/repo
+curl -o ~/bin/repo $GIT_REPO_DOWNLOADS_URL
 chmod a+x ~/bin/repo
 export PATH=$PATH:~/bin
 
