@@ -75,5 +75,5 @@ boards:
         tags: [egf-imx8mm-3sm1008m]
       - name: imx8mp-egf-3sm1009
         tags: [egf-imx8mp-3sm1009]
-      - name: imx8mp-egf-3sm1009
-        tags: [imx93-egf-3sm1010]
+      - name: imx93-egf-3sm1010
+        tags: [egf-imx93-3sm1010]
