@@ -1,0 +1,10 @@
+header:
+  version: 14
+
+includes:
+  - base.yml
+  - machines/imx93-egf-3sm1010.yml
+  - distros/egf-wayland.yml
+
+target:
+  - egf-image

@@ -1,0 +1,7 @@
+header:
+  version: 14
+
+distro: egf-xwayland
+
+env:
+  ACCEPT_FSL_EULA: "1"

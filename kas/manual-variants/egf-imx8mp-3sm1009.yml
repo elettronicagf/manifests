@@ -1,0 +1,10 @@
+header:
+  version: 14
+
+includes:
+  - base.yml
+  - machines/imx8mp-egf-3sm1009.yml
+  - distros/egf-imx8mp-3sm1009.yml
+
+target:
+  - egf-image

@@ -1,0 +1,10 @@
+header:
+  version: 14
+
+includes:
+  - base.yml
+  - machines/imx8mm-egf-3sm1008m.yml
+  - distros/egf-xwayland.yml
+
+target:
+  - egf-image
