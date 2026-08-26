@@ -110,7 +110,7 @@ repos:
 
   meta-egf-bsp-imx:
     url: https://github.com/elettronicagf/meta-egf-bsp-imx
-    commit: 527b3bb4379677136bad022e8e66c15b1f6c546f
+    commit: 0dae4e05e4380dabc597e28a73236c63fea6db04
     path: sources/meta-egf-bsp-imx
 
 local_conf_header:
