@@ -1,0 +1,79 @@
+version: 1
+
+defaults:
+  cacheRoot: /srv/jenkins/yocto-agent-cache
+
+  kasImage: ghcr.io/siemens/kas/kas:4.5
+  manifestImage: local/yocto/manifest-builder:ubuntu22.04-v1
+
+  artifacts:
+    - "*.wic"
+    - "*.wic.gz"
+    - "*.wic.bmap"
+    - "*.rootfs.tar.*"
+    - "*.manifest"
+    - "Image"
+    - "*.dtb"
+    - "u-boot*"
+
+  workdirLocking: true # Only disable if you know what you are doing.
+  parallelBoards: false
+  executionMode: downstream
+  downstreamMode: perBoardJob
+
+  # Migration fallback, switch to fail when all jobs are in place
+  boardBuildJobFallback: fail
+
+  mirrors:
+    enabled: true
+    sourceMirrorUrl: https://downloads.yoctoproject.org/mirror/sources/
+    generateMirrorTarballs: true
+    premirrorsOnly: false
+
+  cleanup:
+    enabled: true
+    bestEffort: true
+
+    success:
+      pruneTmpWork: true
+      pruneTmpWorkShared: true
+      pruneTmpStamps: false
+      pruneTmpCache: false
+      pruneSstateControl: false
+      removeTmp: false # This also remove output artifacts, be careful when enabling it
+
+    failure:
+      preserveWorkdir
+
+  repoSyncJobs: 12
+  bitbakeThreads: 12
+  parallelMake: 12
+
+  artifactRetention:
+    buildsToKeep: 10
+    daysToKeep: 30
+    preserveJenkinsKeptBuilds: true
+
+boards:
+  - kas-nxp:
+    name: kas-nxp
+    buildType: kas
+
+    kas:
+      file: kas/base.yml
+
+    distro: egf-xwayland
+
+    configs:
+      - name: egf-image
+        target: egf-image
+      - name: egf-image-test
+        target: egf-image-test
+
+    machines:
+      - name: imx8mm-egf-3sm1008m
+        tags: [egf-imx8mm-3sm1008m]
+      - name: imx8mp-egf-3sm1009
+        tags: [egf-imx8mp-3sm1009]
+      - name: imx8mp-egf-3sm1009
+        tags: [imx93-egf-3sm1010]
