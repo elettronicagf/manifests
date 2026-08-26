@@ -108,10 +108,10 @@ repos:
     path: sources/meta-nxp-demo-experience
     tag: rel_imx_6.6.23_2.0.0
 
-  meta-egf:
-    url: git@gitrepo.egf.it:egf/meta-egf.git
-    commit: 1a8215bfa229517a8269fca9ba655769f8b3d66e
-    path: sources/meta-egf
+  meta-egf-bsp-imx:
+    url: https://github.com/elettronicagf/meta-egf-bsp-imx
+    commit: 527b3bb4379677136bad022e8e66c15b1f6c546f
+    path: sources/meta-egf-bsp-imx
 
 local_conf_header:
   common: |
