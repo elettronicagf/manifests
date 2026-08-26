@@ -6,6 +6,7 @@ repos:
     url: https://git.yoctoproject.org/poky
     commit: 02eacd385eca7aa9cf25aaaa61427aa9c126e0bc
     path: sources/poky
+    branch: scarthgap
     layers:
       meta:
       meta-poky:
