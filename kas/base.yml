@@ -98,11 +98,11 @@ repos:
       meta-imx-ml:
       meta-imx-v2x:
 
-  meta-matter:
-    url: https://github.com/nxp-imx/meta-matter.git
+  meta-nxp-connectivity:
+    url: https://github.com/nxp-imx/meta-nxp-connectivity.git
     tag: rel_imx_6.6.23-2.0.0
     branch: imx_matter_2024_q1-post
-    path: sources/meta-matter
+    path: sources/meta-nxp-connectivity
     layers: {}
 
   meta-nxp-demo-experience:
