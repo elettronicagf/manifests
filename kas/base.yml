@@ -111,7 +111,8 @@ repos:
 
   meta-egf-bsp-imx:
     url: https://github.com/elettronicagf/meta-egf-bsp-imx
-    commit: 0dae4e05e4380dabc597e28a73236c63fea6db04
+    commit: e45af82126b3fe9f5f065fd049fb376754c31123
+    branch: imx-6.6.23-2.0.0_egf-dev
     path: sources/meta-egf-bsp-imx
 
 local_conf_header:
@@ -147,3 +148,5 @@ local_conf_header:
     DL_DIR ?= "${TOPDIR}/../downloads"
     SSTATE_DIR ?= "${TOPDIR}/../sstate-cache"
     TMPDIR ?= "${TOPDIR}/tmp"
+
+    EGF_DISTRO_VERSION = "imx-6.6.23-2.0.0-kas"
