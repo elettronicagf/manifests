@@ -150,3 +150,5 @@ local_conf_header:
     TMPDIR ?= "${TOPDIR}/tmp"
 
     EGF_DISTRO_VERSION = "imx-6.6.23-2.0.0-kas"
+
+    INHERIT += "rm_work"
