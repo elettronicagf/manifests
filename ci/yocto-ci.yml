@@ -62,7 +62,7 @@ boards:
     kas:
       file: kas/base.yml
 
-    distro: egf-xwayland
+    distros: [egf-xwayland]
 
     configs:
       - name: egf-image
