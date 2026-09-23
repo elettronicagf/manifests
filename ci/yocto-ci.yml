@@ -77,3 +77,29 @@ boards:
         tags: [egf-imx8mp-3sm1009]
       - name: imx93-egf-3sm1010
         tags: [egf-imx93-3sm1010]
+
+  - nxp-official-manifest:
+    name: kas-nxp
+    buildType: manifest
+
+    manifest:
+      url: https://github.com/nxp-imx/imx-manifest.git
+      branch: imx-linux-wrynose
+      file: imx-6.18.37-2.1.0.xml
+      initDir: .
+      buildDir: build
+      setupScript: imx-setup-release.sh
+
+    distros: [fsl-imx-xwayland]
+
+    configs:
+      - name: imx-image-core
+        target: imx-image-core
+      - name: imx-image-multimedia
+        target: imx-image-multimedia
+      - name: imx-image-full
+        target: imx-image-full
+
+    machines:
+      - name: imx8mp-lpddr4-evk
+        tags: [imx8mp-lpddr4-evk]
