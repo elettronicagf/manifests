@@ -79,7 +79,7 @@ boards:
         tags: [egf-imx93-3sm1010]
 
   - nxp-official-manifest:
-    name: kas-nxp
+    name: nxp-official-manifest
     buildType: manifest
 
     manifest:
