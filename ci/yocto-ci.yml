@@ -54,6 +54,8 @@ defaults:
     daysToKeep: 30
     preserveJenkinsKeptBuilds: true
 
+  buildTimeoutHours: 96
+
 boards:
   - kas-nxp:
     name: kas-nxp
