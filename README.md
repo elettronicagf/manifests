@@ -1,7 +1,7 @@
 # iMX9 OSM yocto-bsp-repo Manifests 11/2026
 
 ## Download yocto-bsp-repo [REMOTE: eGF Github]
-repo init -u git@gitrepo.egf.it:egf/egf-pd/repo-shared/manifests/yocto-manifests.git -b iMX9-OSM-6.6.y -m imx9-osm-6.6.y.xml
+repo init -u https://github.com/elettronicagf/manifests.git -b iMX9-OSM-6.6.y-scarthgap -m imx9-osm-6.6.y.xml
 
 repo sync
 
